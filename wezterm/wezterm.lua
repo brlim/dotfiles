@@ -39,6 +39,7 @@ if wezterm.target_triple == "x86_64-apple-darwin" or wezterm.target_triple == "a
 		},
 	}
 elseif wezterm.target_triple == "x86_64-pc-windows-msvc" then
+	config.default_prog = { "pwsh.exe" }
 	config.font_size = 12
 	config.keys = {
 		{
