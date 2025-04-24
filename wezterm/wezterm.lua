@@ -44,27 +44,27 @@ elseif wezterm.target_triple == "x86_64-pc-windows-msvc" then
 	config.keys = {
 		{
 			key = "h",
-			mods = "ALT",
+			mods = "ALT|SHIFT",
 			action = act.ActivatePaneDirection("Left"),
 		},
 		{
 			key = "l",
-			mods = "ALT",
+			mods = "ALT|SHIFT",
 			action = act.ActivatePaneDirection("Right"),
 		},
 		{
 			key = "k",
-			mods = "ALT",
+			mods = "ALT|SHIFT",
 			action = act.ActivatePaneDirection("Up"),
 		},
 		{
 			key = "j",
-			mods = "ALT",
+			mods = "ALT|SHIFT",
 			action = act.ActivatePaneDirection("Down"),
 		},
 		{
 			key = "w",
-			mods = "ALT|CMD|SHIFT",
+			mods = "ALT|SHIFT",
 			action = wezterm.action.CloseCurrentPane({ confirm = true }),
 		},
 	}
