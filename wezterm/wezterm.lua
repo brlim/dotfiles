@@ -13,28 +13,49 @@ if wezterm.target_triple == "x86_64-apple-darwin" or wezterm.target_triple == "a
 	config.font_size = 16
 	config.keys = {
 		{
+			key = "5",
+			mods = "CMD",
+			action = act.SplitPane({
+				direction = "Right",
+			}),
+		},
+		{
+			key = "'",
+			mods = "CMD",
+			action = act.SplitPane({
+				direction = "Down",
+			}),
+		},
+		{
+			key = "w",
+			mods = "CMD",
+			action = act.CloseCurrentPane({
+				confirm = false,
+			}),
+		},
+		{
 			key = "h",
-			mods = "CMD|SHIFT",
+			mods = "CMD",
 			action = act.ActivatePaneDirection("Left"),
 		},
 		{
 			key = "l",
-			mods = "CMD|SHIFT",
+			mods = "CMD",
 			action = act.ActivatePaneDirection("Right"),
 		},
 		{
 			key = "k",
-			mods = "CMD|SHIFT",
+			mods = "CMD",
 			action = act.ActivatePaneDirection("Up"),
 		},
 		{
 			key = "j",
-			mods = "CMD|SHIFT",
+			mods = "CMD",
 			action = act.ActivatePaneDirection("Down"),
 		},
 		{
 			key = "w",
-			mods = "CMD|SHIFT",
+			mods = "CMD",
 			action = wezterm.action.CloseCurrentPane({ confirm = true }),
 		},
 	}
@@ -43,28 +64,49 @@ elseif wezterm.target_triple == "x86_64-pc-windows-msvc" then
 	config.font_size = 12
 	config.keys = {
 		{
+			key = "5",
+			mods = "ALT",
+			action = act.SplitPane({
+				direction = "Right",
+			}),
+		},
+		{
+			key = "'",
+			mods = "ALT",
+			action = act.SplitPane({
+				direction = "Down",
+			}),
+		},
+		{
+			key = "w",
+			mods = "ALT",
+			action = act.CloseCurrentPane({
+				confirm = false,
+			}),
+		},
+		{
 			key = "h",
-			mods = "ALT|SHIFT",
+			mods = "ALT",
 			action = act.ActivatePaneDirection("Left"),
 		},
 		{
 			key = "l",
-			mods = "ALT|SHIFT",
+			mods = "ALT",
 			action = act.ActivatePaneDirection("Right"),
 		},
 		{
 			key = "k",
-			mods = "ALT|SHIFT",
+			mods = "ALT",
 			action = act.ActivatePaneDirection("Up"),
 		},
 		{
 			key = "j",
-			mods = "ALT|SHIFT",
+			mods = "ALT",
 			action = act.ActivatePaneDirection("Down"),
 		},
 		{
 			key = "w",
-			mods = "ALT|SHIFT",
+			mods = "ALT",
 			action = wezterm.action.CloseCurrentPane({ confirm = true }),
 		},
 	}
