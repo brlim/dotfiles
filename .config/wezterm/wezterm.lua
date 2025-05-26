@@ -109,6 +109,18 @@ elseif wezterm.target_triple == "x86_64-pc-windows-msvc" then
 			mods = "ALT",
 			action = wezterm.action.CloseCurrentPane({ confirm = true }),
 		},
+
+		-- This is needed so that copy/paste works when using wsl in wezterm.
+		{
+			key = "v",
+			mods = "CTRL",
+			action = wezterm.action.PasteFrom("Clipboard"),
+		},
+		{
+			key = "v",
+			mods = "CTRL",
+			action = wezterm.action.PasteFrom("PrimarySelection"),
+		},
 	}
 end
 
